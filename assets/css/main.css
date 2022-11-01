@@ -13,6 +13,8 @@
 @layer components {
   body {
     font-family: "Quicksand", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+    @apply text-white
   }
 
   .interior {
@@ -20,6 +22,26 @@
   }
 
   .related-links a {
-    @apply block px-3 py-2 bg-sky-600 text-white w-40 rounded hover:bg-cyan-500 hover:shadow-md transition-all duration-300
+    background-size: 1.6em;
+    background-position: 0.6em 0.45em;
+    background-repeat: no-repeat;
+
+    @apply block px-3 py-2 bg-blue-500 text-white w-48 rounded hover:bg-cyan-500 hover:shadow-md transition-all duration-300 pl-11
+  }
+
+  .related-links a.github {
+    background-image: url('/assets/icons/github.svg');
+  }
+
+  .related-links a.stack-overflow{
+    background-image: url('/assets/icons/stack-overflow.svg');
+  }
+
+  .related-links a.rubygems{
+    background-image: url('/assets/icons/rubygems.svg');
+  }
+
+  .related-links a.npm{
+    background-image: url('/assets/icons/npm.svg');
   }
 }
