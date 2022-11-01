@@ -1,6 +1,6 @@
-runs:
-  using: 'node16'
-  main: 'main.js'
+# runs:
+#   using: 'node16'
+#   main: 'main.js'
 
 on:
   push:
