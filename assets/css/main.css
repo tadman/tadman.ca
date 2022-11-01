@@ -21,6 +21,10 @@
     @apply py-4
   }
 
+  .interior p {
+    @apply pb-4 leading-8
+  }
+
   .related-links a {
     background-size: 1.6em;
     background-position: 0.6em 0.45em;
