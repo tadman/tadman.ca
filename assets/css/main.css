@@ -4,3 +4,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/quicksand.ttf");
+}
+
+@layer components {
+  body {
+    font-family: "Quicksand", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+
+  .interior {
+    @apply py-4
+  }
+
+  .related-links a {
+    @apply block px-3 py-2 bg-sky-600 text-white w-40 rounded hover:bg-cyan-500 hover:shadow-md transition-all duration-300
+  }
+}

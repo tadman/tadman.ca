@@ -14,5 +14,11 @@ yarn install
 To start the Jekyll development server:
 
 ```shell
+rake serve
+```
+
+Which pops up a site at [http://localhost:4020/](http://localhost:4020/)
+
+```shell
 bundle exec jekyll serve --port 4020 --livereload --livereload-port 4021
 ```
