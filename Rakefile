@@ -13,5 +13,7 @@ end
 task :build do
   system(
     "jekyll",
-    "build"
+    "build",
+    "--future"
+  )
 end
