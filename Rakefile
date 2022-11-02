@@ -9,3 +9,9 @@ task :serve do
     "--livereload-port", "4021"
   )
 end
+
+task :build do
+  system(
+    "jekyll",
+    "build"
+end
