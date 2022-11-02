@@ -38,6 +38,7 @@ plugins:
   - jekyll-postcss-v2
 
 exclude:
+  - vendor
   - package.json
   - yarn.lock
   - README.md
