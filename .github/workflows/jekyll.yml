@@ -20,10 +20,11 @@ jobs:
       - name: Builds using the jekyll/builder container
         run: |
           docker run \
-          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+          -v ${{ github.workspace }}:/build -v ${{ github.workspace }}/_site:/build/_site \
+          ghcr.io/tadman/jekyll-builder:latest /bin/bash -c "chmod -R 777 /build && jekyll build --future"
 
-      - name: Build Jekyll Pages
-        uses: helaili/jekyll-action@v2
+      - name: Deploy Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          folder: _site
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
